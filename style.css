@@ -1,0 +1,240 @@
+/* style.css - DESIGN FINAL "COPPER LUXE" */
+
+:root {
+    --couleur-fond-primaire: #0a0a0a; /* Noir Ultra Profond */
+    --couleur-texte-clair: #f0f0f0; 
+    --couleur-cuivre: #B87333; /* Cuivre (Couleur de base) */
+    --couleur-cuivre-vif: #e69138; /* Cuivre Éclairci pour l'éclat */
+    --couleur-transparente: rgba(255, 255, 255, 0.05);
+    --font-titre: 'Playfair Display', serif;
+    --font-corps: 'Lato', sans-serif;
+}
+
+/* *Effet de Verre Dépoli Cuivré (pour le header et le hero-block)* */
+.copper-glass {
+    background-color: rgba(26, 26, 26, 0.7); /* Fond gris foncé transparent */
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(184, 115, 51, 0.3); /* Bordure Cuivre Transparent */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-corps);
+}
+
+body {
+    background-color: var(--couleur-fond-primaire);
+    color: var(--couleur-texte-clair);
+    line-height: 1.6;
+    font-size: 14px; /* Écriture petite */
+}
+
+a { color: var(--couleur-cuivre-vif); text-decoration: none; transition: 0.3s; }
+a:hover { color: var(--couleur-texte-clair); }
+
+
+/* --------------------------------- HEADER & LOGO (Cuivre Brossé) --------------------------------- */
+header {
+    padding: 10px 5%; /* Padding réduit pour un look plus compact */
+    display: flex;
+    flex-direction: column; /* Pour centrer la nav sous le logo */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Effet du titre 'FLACON NOIR' (Deux mots, en Métal) */
+.metal-text {
+    font-family: var(--font-titre);
+    text-transform: uppercase;
+    font-weight: 700;
+    /* Dégradé pour simuler le Cuivre Brossé */
+    background: linear-gradient(145deg, #FFD700 10%, #B87333 40%, #FFD700 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: 5px;
+}
+.main-logo-words {
+    font-size: 2.5em; /* Le LOGO est grand */
+    margin-bottom: 5px;
+}
+
+/* Titre ECLYPTO (Plus petit) */
+.copper-text {
+    color: var(--couleur-cuivre-vif);
+    letter-spacing: 4px;
+    font-size: 1em; /* Le titre ECLYPTO est petit */
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.logo-eclipto {
+    font-family: var(--font-titre);
+    text-transform: uppercase;
+}
+
+/* Slogan de Vente (Phrase très petite et précise) */
+.slogan-vente {
+    font-size: 0.7em; /* Slogan TRES petit */
+    color: var(--couleur-texte-clair);
+    letter-spacing: 1px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+/* Navigation centrée (La demande de structure) */
+.centered-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+.centered-nav ul li a {
+    color: var(--couleur-texte-clair);
+    padding: 8px 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.centered-nav ul li a:hover {
+    color: var(--couleur-cuivre-vif);
+    border-bottom: 1px solid var(--couleur-cuivre-vif);
+}
+
+
+/* --------------------------------- SECTION HÉRO (Design Immersif) --------------------------------- */
+.hero-full-screen {
+    /* Image de fond CUIVRE/NOIR pour la meilleure immersion (Mettez une photo sombre et riche) */
+    background-image: url('images/hero_copper_luxe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* L'image ne bouge pas, effet de profondeur */
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text-block {
+    padding: 60px;
+    text-align: center;
+    max-width: 650px;
+}
+
+.hero-text-block h2 {
+    font-family: var(--font-titre);
+    font-size: 3.5em;
+    color: var(--couleur-cuivre-vif);
+    text-shadow: 0 0 15px rgba(255, 140, 0, 0.7); /* Lueur de Cuivre intense */
+    margin-bottom: 15px;
+}
+
+.intro-phrase {
+    font-size: 1.1em;
+    color: var(--couleur-texte-clair);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.cta-button {
+    background-color: var(--couleur-cuivre-vif);
+    color: var(--couleur-fond-primaire);
+    padding: 12px 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1em;
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    border-color: var(--couleur-cuivre-vif);
+    color: var(--couleur-cuivre-vif);
+}
+
+/* --------------------------------- SECTION EXPERTISE (3D - L'effet "Wesh Oh Lala") --------------------------------- */
+.expertise-3d {
+    background-color: var(--couleur-fond-primaire);
+    /* Utilisation de l'ombre pour créer un effet de bordure subtil */
+    box-shadow: 0 0 10px rgba(184, 115, 51, 0.5); 
+    /* ... (le reste des styles 3D est repris de la version précédente pour l'effet) ... */
+    padding: 80px 5%;
+    display: flex;
+    justify-content: space-around;
+    perspective: 1000px; 
+}
+/* ... Styles .card-3d, .card-3d:hover, h3, p de la version précédente sont à recopier ici ... */
+
+
+/* --------------------------------- FOOTER --------------------------------- */
+footer {
+    background-color: #222;
+    color: var(--couleur-cuivre);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.75em; 
+    border-top: 1px solid var(--couleur-cuivre);
+}
+/* --- NOUVEAUX STYLES POUR LES PAGES LISTE DE MARQUES --- */
+
+.brand-list-container {
+    width: 100%;
+    max-width: 800px; /* La liste sera centrée et pas trop large */
+    margin: 0 auto; /* Centre la liste sur la page */
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden; /* Pour garder les coins arrondis */
+}
+
+.brand-list-page {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brand-list-page li {
+    display: flex; /* La magie est ici ! */
+    justify-content: space-between; /* Met le nom à gauche et le prix à droite */
+    align-items: center; /* Centre verticalement */
+    padding: 20px 25px;
+    border-bottom: 1px solid #f0f0f0; /* Ligne de séparation légère */
+    transition: background-color 0.3s ease;
+}
+
+.brand-list-page li:last-child {
+    border-bottom: none; /* Pas de ligne sur le dernier élément */
+}
+
+/* Effet "magnifique" au survol */
+.brand-list-page li:hover {
+    background-color: #fcfcfc;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+}
+
+.brand-price {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    background-color: #f4f4f4; /* Petit fond gris pour le prix */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
